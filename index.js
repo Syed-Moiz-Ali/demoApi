@@ -77,7 +77,7 @@ app.get('/api/upcoming', async (req, res) => {
     res.json(scrapedData); // Send scraped data as JSON response
   } catch (error) {
     console.error('Error occurred:', error);
-    res.status(500).json({ error: 'An error occurred while fetching data.' });
+    res.status(500).json({ error: error });
   }
 });
 app.get('/api/new', async (req, res) => {
@@ -86,7 +86,7 @@ app.get('/api/new', async (req, res) => {
     res.json(scrapedData); // Send scraped data as JSON response
   } catch (error) {
     console.error('Error occurred:', error);
-    res.status(500).json({ error: 'An error occurred while fetching data.' });
+    res.status(500).json({ error: error });
   }
 });
 app.get('/api/popular', async (req, res) => {
@@ -95,7 +95,7 @@ app.get('/api/popular', async (req, res) => {
     res.json(scrapedData); // Send scraped data as JSON response
   } catch (error) {
     console.error('Error occurred:', error);
-    res.status(500).json({ error: 'An error occurred while fetching data.' });
+    res.status(500).json({ error: error });
   }
 });
 
